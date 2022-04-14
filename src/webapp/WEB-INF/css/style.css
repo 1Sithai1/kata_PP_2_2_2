@@ -1,0 +1,38 @@
+.header {
+    counter-reset: h1;
+    list-style: none;
+    font: 14px "Trebuchet MS", "Lucida Sans";
+    padding: 0;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    margin-left: auto;
+    margin-right: auto;
+    width: 40em;
+}
+.header h1 {
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2em;
+    margin: .5em 0;
+    background: #dad2ca;
+    color: #444;
+    text-decoration: none;
+    border-radius: .3em;
+    transition: .3s ease-out;
+}
+
+.header h1:hover {background: #e9e4e0}
+.header h1:hover:before {transform: rotate(360deg);}
+.header h1:before {
+    content: counter(h1);
+    counter-increment: h1;
+    position: absolute;
+    left: .1em;
+    background: #8fd4c1;
+    height: 1em;
+    line-height: 1em;
+    border: .2em solid white;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: all .3s ease-out;
+}
